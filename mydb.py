@@ -14,6 +14,6 @@ cousorObject = dataBase.cursor()
 
 # create a database
 
-cousorObject.execute("CREATE table sno")
+cousorObject.execute("CREATE table ")
 
 print("All done!")

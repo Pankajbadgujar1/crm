@@ -30,4 +30,4 @@ def logout_user(request):
     return render(request, 'home.html')
 
 def register_user(request):
-    return render(request, 'register.html')
+    return render(request, 'register.html', {})
