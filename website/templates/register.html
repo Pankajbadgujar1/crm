@@ -6,9 +6,18 @@
 <br/>
     <form method="POST" action="">
         {% csrf_token %}
+        {% if form.errors %}
+        <div class="alert alert-warning alert-dismissible fade.show" role="alert">
+            Your Form Has Errors
+            {% for field in form %}
+            {% if field.errors %}
+            {{field.errors}}
 
-
-      {{form.as_p}}
+            {% endif%}
+            {% endfor%}
+        </div>
+        {% endif%}
+        {{form.as_p}}
       <br/>
         <button type="submit" class="btn btn-secondary">
             Register
